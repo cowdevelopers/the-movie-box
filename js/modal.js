@@ -63,43 +63,7 @@ $(document).on('mouseleave', '.body__cont__item', function() {
 
 
 
-  function render(data, index) {
-    // Create Element
-    var modal__wrap = $('<div class="modal__wrap" data-index="' + index + '"></div>'),
-      modal__body__wrap = $('<div class="modal__body__wrap"></div>'),
-      modal__poster_wrap = $('<div class="modal__poster__wrap"></div>'),
-      modal__info__wrap = $('<div class="modal__body__info__wrap"></div>'),
-
-      modal__poster = $('<img class="modal__poster" src="' + data.medium_cover_image + '" alt="' + data.title + '"/>'),
-      modal__year = $('<p class="modal__year">' + data.year + '</p>'),
-      modal__title = $('<h3 class="modal__title">' + data.title + '</h3>'),
-      // modal__rating = $('<p class="modal__rating">' + (data.rating / 2).toFixed(1) + '</p>'),
-      modal__synopsis = $('<p class="modal__synopsis">' + data.description_full + '</p>');
-
-    var genres = '';
-    var modal__genre = null;
-
-    $.each(data.genres, function(index, _data) {
-      ((data.genres.length - 1) === index) ? genres += _data: genres += _data + ' ';
-    });
-
-    modal__genre = $('<p class="modal__genres">' + genres + '</p>');
-
-    // Append Element
-    modal__poster_wrap.append(modal__poster);
-
-    modal__info__wrap.append(modal__title);
-    modal__info__wrap.append(modal__year);
-    modal__info__wrap.append(modal__genre);
-    // modal__info__wrap.append(modal__rating);
-    modal__info__wrap.append(modal__synopsis);
-
-    modal__body__wrap.append(modal__poster_wrap);
-    modal__body__wrap.append(modal__info__wrap);
-
-    modal__wrap.append(modal__body__wrap);
-    modal_list.append(modal__wrap);
-  }
+  
 
   init();
 
