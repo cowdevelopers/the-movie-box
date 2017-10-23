@@ -8,7 +8,7 @@
 
 ## 사용 기술
 1. HTML
-2. Saaa
+2. Sass
 3. jQuery
 4. Ajax
 
