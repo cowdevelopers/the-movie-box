@@ -1,61 +1,104 @@
 main
   background-color: #f8f8f8
   display: block
-  .body__nav
-    border-bottom: 1px solid #dfdfdf
-    margin: 0 auto
-    width: 1080px
-  
-    .body__nav__main-wrap
-      padding: 2.5rem 0 1.8rem
-      font-size: 1.5rem
-      display: inline-block
-      color: $gray-color
-      li
-        float: left
-        padding: 0 2rem
-        font-size: 1.15rem
+  padding-bottom: 5rem
 
-    .body__nav__sub-wrap
-      display: inline-block
-      float: right
-      .body__nav__view-modules
-        float: right
-        padding: 1rem
-        padding-right: 0
-        margin-top: 0.9rem
-        .material-icons
-          font-size: 2rem
-          color: $gray-color
-      .body__nav__view-list
-        float: left
-        padding: 1rem
-        margin-top: 0.9rem
-        .material-icons
-          font-size: 2rem
-          color: $gray-color
-  .body__cont
-    margin: 0 auto
-    width: 1080px
-    .body__cont__list
-      display: grid
-      grid-template-columns: 25% 25% 25% 25%
-      padding-top: 2rem
-      .body__cont__item
-        background-color: #fff
-        margin: 1rem
-        box-shadow: 0 0 30px 1px #ccc
-        .body__cont__item-wrapper
-          .body__cont__poster__wrapper
-            position: relative
-            .body__cont__poster
-              width: 100%
-            .body__cont__year
-              position: absolute
-              bottom: 1.2rem
-              left: 1.2rem
-              font-size: 1.4rem
-              color: #b6b7bf
+.body__nav
+  border-bottom: 1px solid #dfdfdf
+  margin: 0 auto
+  width: 1080px
+  height: 72px
+  vertical-align: middle
+  
+.body__nav__main-wrap
+  height: 100%
+  float: left
+  width: 60%
+  .body__nav__link
+    float: left
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    color: $gray-color
+    padding: 0 2rem
+    font-size: 1.15rem
+    line-height: 71px
+    &:hover
+      color: $main-color
+      border-bottom: 2px solid $main-color
+    &.active
+      color: $main-color
+      border-bottom: 2px solid $main-color
+
+
+.body__nav__sub-wrap
+  float: right
+  height: 100%
+  width: 20%
+  display: flex
+  justify-content: center
+  align-items: center
+  text-decoration: none
+
+
+.body__nav__view-modules, .body__nav__view-list
+  padding: 0 2rem
+
+
+
+
+.list-icon, .module-icon
+  font-size: 2rem
+  color: $gray-color
+  cursor: pointer
+  &:hover
+    color: $main-color
+
+.body__nav__submenu
+  display: none
+  position: absolute
+  left: 44%
+  top: 46%
+  z-index: 5
+  padding: 1rem
+  background-color: #dadada
+  a
+    text-decoration: none
+
+  li
+    padding: 0.5rem 1rem
+  &.active
+    display: block
+
+
+
+
+
+
+
+.body__cont
+  margin: 0 auto
+  width: 1080px
+  .body__cont__list
+    display: grid
+    grid-template-columns: 25% 25% 25% 25%
+    padding-top: 2rem
+    .body__cont__item
+      background-color: #fff
+      margin: 1rem
+      box-shadow: 0 0 30px 1px #ccc
+      .body__cont__item-wrapper
+        .body__cont__poster__wrapper
+          position: relative
+          .body__cont__poster
+            width: 100%
+          .body__cont__year
+            position: absolute
+            bottom: 1.2rem
+            left: 1.2rem
+            font-size: 1.4rem
+            color: #b6b7bf
         
         .body__cont__info__wrapper
           position: relative
