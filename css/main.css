@@ -293,25 +293,52 @@ main .body__cont .body__cont__list .body__cont__item .body__cont__info__wrapper 
 .footer__wrap {
   width: 1080px;
   margin: 30px auto;
+  color: #80818a;
+  height: 200px;
 }
 
-.footer__wrap .footer__heading {
+.footer__container {
+  border-bottom: 1px solid #f1f1f3;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer__heading {
   font-size: 2rem;
   display: inline-block;
 }
 
-.footer__wrap .footer__nav__wrap {
+.footer__nav__wrap {
   font-size: 1.2rem;
   float: right;
 }
 
-.footer__wrap .footer__nav__wrap .footer__nav__list {
+.footer__nav__list {
   margin-left: 6rem;
+  margin-top: 0.5rem;
 }
 
-.footer__wrap .footer__nav__wrap .footer__nav__list .footer__nav__item {
+.footer__nav__item {
   float: left;
   margin-left: 30px;
+}
+
+.footer__copyright {
+  margin-top: 0.7rem;
+  display: inline-block;
+}
+
+.footer__github {
+  float: right;
+}
+
+.footer__github a {
+  text-decoration: none;
+}
+
+.devicon-github-plain:before {
+  font-size: 2rem;
+  color: #80818a;
 }
 
 .modal {
