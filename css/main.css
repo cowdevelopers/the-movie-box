@@ -263,7 +263,9 @@ main {
 
 .body__cont .body__cont__list {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-columns: 25% 25% 25% 25%;
   padding-top: 2rem;
 }
 
@@ -422,7 +424,9 @@ main {
 
 .modal__body__wrap {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 30% 70%;
+  -ms-grid-columns: 30% 70%;
   grid-gap: 1rem;
 }
 
