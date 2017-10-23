@@ -327,41 +327,23 @@ main {
 }
 
 .footer__wrap {
-  width: 1080px;
-  margin: 30px auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
   color: #80818a;
-  height: 200px;
-}
-
-.footer__container {
-  border-bottom: 1px solid #f1f1f3;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer__heading {
-  font-size: 2rem;
-  display: inline-block;
-}
-
-.footer__nav__wrap {
-  font-size: 1.2rem;
-  float: right;
-}
-
-.footer__nav__list {
-  margin-left: 6rem;
-  margin-top: 0.5rem;
-}
-
-.footer__nav__item {
-  float: left;
-  margin-left: 30px;
+  height: 72px;
+  background-color: #eee;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__copyright {
-  margin-top: 0.7rem;
+  margin-top: 5px;
   display: inline-block;
+  padding-right: 3rem;
 }
 
 .footer__github {
