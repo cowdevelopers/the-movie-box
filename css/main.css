@@ -1,0 +1,441 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header__wrap {
+  position: relative;
+  background: url("../wrath-of-the-titans.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-position: 0 -250px;
+  height: 40vh;
+}
+
+.header__cover-image {
+  height: 100%;
+}
+
+.header__nav {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 5;
+}
+
+.header__logo {
+  left: 0;
+  top: 0;
+  line-height: 50px;
+  margin-left: 5rem;
+}
+
+.header__logo__text {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header__search-wrap {
+  position: absolute;
+  top: 1rem;
+  right: 10rem;
+}
+
+.search-btn.material-icons {
+  color: #fff;
+  font-weight: 100;
+}
+
+.header__search-bar {
+  display: none;
+}
+
+.header__main-content__wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto 4rem;
+  height: 150px;
+  width: 450px;
+}
+
+.header__main-content__title {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header__main-content__genres, .header__main-content__time {
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.75px;
+  color: #dfdfdf;
+  display: inline-block;
+}
+
+.header__main-content__details {
+  display: inline-block;
+  color: #ddd;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.header__sub-content {
+  padding: 0.75rem 1rem;
+  border: 1px solid #555;
+  background-color: rgba(35, 35, 35, 0.5);
+  position: absolute;
+  bottom: 3rem;
+  right: 5rem;
+}
+
+.header__sub-content__rating {
+  color: #eee;
+  display: block;
+}
+
+.header__sub-content__rating__param {
+  display: inline-block;
+}
+
+.header__sub-content__rating-count {
+  display: inline-block;
+  font-size: 0.5rem;
+  color: #d1d1d1;
+}
+
+.header__sub-content__ratings-star {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
+.rating-star {
+  font-size: 1rem;
+  color: #ff0079;
+}
+
+.header__sub-content__ratings-number {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  background-color: rgba(35, 35, 35, 0.2);
+  color: #d1d1d1;
+  border: 1px solid #555;
+}
+
+.header__sub-content__rating__wrap {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  background-color: #f8f8f8;
+  display: block;
+}
+
+main .body__nav {
+  border-bottom: 1px solid #dfdfdf;
+  margin: 0 auto;
+  width: 1080px;
+}
+
+main .body__nav .body__nav__main-wrap {
+  padding: 2.5rem 0 1.8rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  color: #80818a;
+}
+
+main .body__nav .body__nav__main-wrap li {
+  float: left;
+  padding: 0 2rem;
+  font-size: 1.15rem;
+}
+
+main .body__nav .body__nav__sub-wrap {
+  display: inline-block;
+  float: right;
+}
+
+main .body__nav .body__nav__sub-wrap .body__nav__view-modules {
+  float: right;
+  padding: 1rem;
+  padding-right: 0;
+  margin-top: 0.9rem;
+}
+
+main .body__nav .body__nav__sub-wrap .body__nav__view-modules .material-icons {
+  font-size: 2rem;
+  color: #80818a;
+}
+
+main .body__nav .body__nav__sub-wrap .body__nav__view-list {
+  float: left;
+  padding: 1rem;
+  margin-top: 0.9rem;
+}
+
+main .body__nav .body__nav__sub-wrap .body__nav__view-list .material-icons {
+  font-size: 2rem;
+  color: #80818a;
+}
+
+main .body__cont {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+main .body__cont .body__cont__list {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding-top: 2rem;
+}
+
+main .body__cont .body__cont__list .body__cont__item {
+  background-color: #fff;
+  margin: 1rem;
+  box-shadow: 0 0 30px 1px #ccc;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__poster__wrapper {
+  position: relative;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__poster__wrapper .body__cont__poster {
+  width: 100%;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__poster__wrapper .body__cont__year {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  font-size: 1.4rem;
+  color: #b6b7bf;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__info__wrapper {
+  position: relative;
+  padding: 1.2rem;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__info__wrapper .body__cont__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__info__wrapper .body__cont__genres {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  display: inline-block;
+  width: 7.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #80818a;
+}
+
+main .body__cont .body__cont__list .body__cont__item .body__cont__info__wrapper .body__cont__rating {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  border: 1px solid #ff0079;
+  border-radius: 3px;
+  padding: 0.4rem 0.7rem 0.2rem 0.7rem;
+  font-size: 1rem;
+  color: #ff0079;
+}
+
+.footer__wrap {
+  width: 1080px;
+  margin: 30px auto;
+}
+
+.footer__wrap .footer__heading {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.footer__wrap .footer__nav__wrap {
+  font-size: 1.2rem;
+  float: right;
+}
+
+.footer__wrap .footer__nav__wrap .footer__nav__list {
+  margin-left: 6rem;
+}
+
+.footer__wrap .footer__nav__wrap .footer__nav__list .footer__nav__item {
+  float: left;
+  margin-left: 30px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.is-showing {
+  display: block;
+}
+
+.modal__cont {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+  margin: 15% auto;
+  padding: 0;
+  width: 800px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal__close-btn {
+  color: #555;
+  float: right;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.modal__close-btn:hover, .modal__close-btn:focus {
+  color: #dadada;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__header {
+  padding: 15px;
+  color: #fff;
+}
+
+.modal__body {
+  padding: 1.5rem;
+  margin-left: 1rem;
+}
+
+.modal__body__wrap {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 1rem;
+}
+
+.modal__body__info__wrap {
+  padding: 1rem;
+}
+
+.modal__title {
+  color: #fdfdfd;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.modal__year {
+  margin-top: 1rem;
+  color: #dfdfdf;
+}
+
+.modal__genres {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #a1a1a1;
+  margin: 1rem 0;
+}
+
+.modal__synopsis {
+  color: #b8b8b8;
+  margin-top: 3.5rem;
+  line-height: 1.4;
+  text-indent: 1rem;
+}
+
+.header__main-content__btn {
+  display: inline-block;
+}
+
+.main-btn {
+  background-color: #ff0079;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0.75rem;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.sub-btn {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 1rem;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

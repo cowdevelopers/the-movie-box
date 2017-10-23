@@ -1,0 +1,26 @@
+{
+  "name": "The-Movie-Box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "./node_modules/.bin/node-sass -w ./sass -o ./css --output-style expanded --source-map true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likedemian/the-movie-box.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/likedemian/the-movie-box/issues"
+  },
+  "homepage": "https://github.com/likedemian/the-movie-box#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}

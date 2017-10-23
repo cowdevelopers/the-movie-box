@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" charset="UTF-8" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <!-- Scripts -->
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header__wrap">
+      <div class="header__nav">
+        <div class="header__logo">
+          <h1 class="header__logo__text">THEMOVIEBOX</h1>
+        </div>
+        <div class="header__search-wrap">
+          <i class="material-icons search-btn">search</i>
+          <input type="text" class="header__search-bar">
+        </div>
+      </div>
+      <div class="header__main-content">
+        <div class="header__main-content__image"></div>
+        <div class="header__main-content__wrap">
+          <h2 class="header__main-content__title">WRATH OF THE TITANS</h2>
+          <div class="header__main-content__genres">Fantasy Animation Familiy</div>
+          <div class="header__main-content__time">Duration: 1h 52m</div>
+          <div class="header__main-content__btn">
+            <button class="main-btn">WATCH MOVIE</button>
+            <button class="sub-btn">VIEW INFO</button>
+          </div>
+          <p class="header__main-content__details">+ ADD TO WISH LIST</p>
+        </div>
+      </div>
+      <div class="header__sub-content">
+        <div class="header__sub-content__wrap">
+          <div class="header__sub-content__rating">
+            <p class="header__sub-content__rating__param">Rating</p>
+            <span class="header__sub-content__rating-count">Based on 3,546 Reviews</span>
+          </div>
+          <div class="header__sub-content__rating__wrap">
+            <div class="header__sub-content__ratings-star">
+              <i class="material-icons rating-star">star</i>
+              <i class="material-icons rating-star">star</i>
+              <i class="material-icons rating-star">star</i>
+              <i class="material-icons rating-star">star_half</i>
+              <i class="material-icons rating-star">star_border</i>
+            </div>
+            <div class="header__sub-content__ratings-number">3.4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="body__nav">
+      <ul class="body__nav__main-wrap">
+        <li class="body__nav__trending"><a href="#" class="body__nav__link" data-type="trending">Trending</a></li>
+        <li class="body__nav__top-rated"><a href="#" class="body__nav__link" data-type="topRated">Top Rated</a></li>
+        <li class="body__nav__new-arrivals"><a href="#" class="body__nav__link" data-type="newArrivals">New Arrivals</a></li>
+        <li class="body__nav__genres">
+          <a href="#" class="body__nav__link" data-type="genres">Genres</a>
+          <ul class="body__nav__submenu">
+            <li>
+              <a href="#">
+                Action
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Crime
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Animation
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Comedy
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Horror
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Documentary
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Biography
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Thriller
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sci-Fi
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Adventure
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sport
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                War
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Fantasy
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Romance
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="body__nav__sub-wrap">
+        <div class="body__nav__view-modules">
+          <i class="material-icons module-icon">menu</i>
+        </div>
+        <div class="body__nav__view-list">
+          <i class="material-icons list-icon">apps</i>
+        </div>
+      </div>
+    </div>
+    <div class="body__cont">
+      <ul class="body__cont__list">
+        <!-- <li class="body__cont__item">
+          <div class="body__cont__item-wrapper">
+            <div class="body__cont__poster__wrapper">
+              <img src="" alt="" class="body__cont__poster">
+              <span class="body__cont__year">2017</span>
+            </div>
+            <div class="body__cont__info__wrapper">
+              <h3 class="body__cont__title">Logan</h3>
+              <p class="body__cont__genres">Action, Adventure</p>
+              <span class="body__cont__rating">4.0</span>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </main>
+
+  <div class="modal">
+    <div class="modal__cont">
+      <div class="modal__header">
+        <span class="modal__close-btn">&times;</span>
+      </div>
+      <div class="modal__body">
+      </div>
+      <div class="modal__footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer__wrap">
+      <div class="footer__heading">THEMOVIEBOX</div>
+      <div class="footer__nav__wrap">
+        <ul class="footer__nav__list">
+          <li class="footer__nav__item">About</li>
+          <li class="footer__nav__item">Movies</li>
+          <li class="footer__nav__item">Ratings</li>
+          <li class="footer__nav__item">Contact</li>
+        </ul>
+      </div>
+      <div class="footer__copyright">진아</div>
+      <div class="footer__social-media">
+        <ul class="footer__social-media__list">
+          <li class="footer__social-media__item">Facebook</li>
+          <li class="footer__social-media__item">Pinterest</li>
+          <li class="footer__social-media__item">Twitter</li>
+          <li class="footer__social-media__item">Linkedin</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+
+</html>
