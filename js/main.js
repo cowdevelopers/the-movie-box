@@ -80,7 +80,6 @@
         URL = urls[type];
         
         if( submenu.length === 0 ) {
-          console.log('0');
           data = [];
           getData();
 
@@ -120,7 +119,8 @@
     });
     search.keydown(function(e) {
       if( target_search_list && e.keyCode === 8 ) {
-        target_search_list.remove();
+        target_search_list[0].parentNode.removeChild(target_search_list[0]);
+        target_search_list = null;
       }
     });
     search_btn.on('click', function() {
@@ -128,6 +128,9 @@
         search_input.animate({ width: 300 + 'px' }, 300);
       } else {
         search_input.animate({ width: 0 + 'px' }, 300);
+
+        target_search_list && target_search_list[0].parentNode.removeChild(target_search_list[0]);
+        search.attr('value', '');
       }
     });
   }
@@ -150,7 +153,7 @@
     // console.log('getData: ', page_number);
     $.get(URL + page_number, function(response) {
       // page_number, data 받기
-      if(response.status === 'ok') {
+      if(response.status === 'ok' && response.data.movie_count !== 0) {
         
         data = data.concat(response.data.movies); 
         
@@ -167,7 +170,7 @@
         }, 500);
 
       } else {
-        console.log('response.status: ', response.status);
+        alert('영화를 불러올 수 없습니다.');
       }
       // reset scrolling_offsetTop;
 
@@ -184,7 +187,9 @@
     }
 
     for(var i = 0, len = children.length; i < len; i++) {
-      children[i].remove();
+      var child = children[i];
+
+      child.parentNode.removeChild(children[i]);
     }
   }
 
@@ -247,7 +252,11 @@
 
   function modalRender(data) {
 
-    if( target_modal ) { target_modal.remove(); }
+    if( target_modal ) { 
+
+      target_modal[0].parentNode.removeChild(target_modal[0]); 
+      target_modal = null;
+    }
     console.log('modalRender: ', data);
     // Create Element
     var modal__wrap = $('<div class="modal__wrap"></div>'),
@@ -290,7 +299,10 @@
 
   function searchListRender(movies) {
     // search_list
-    if( target_search_list ) { target_search_list.remove() }
+    if( target_search_list ) { 
+      target_search_list[0].parentNode.removeChild(target_search_list[0]); 
+      target_search_list = null;
+    }
     console.log(movies);
     if( movies.length === 0 ) { return; }
 

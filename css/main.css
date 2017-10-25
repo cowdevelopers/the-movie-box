@@ -107,6 +107,7 @@ table {
   width: 0;
   height: 1.5rem;
   box-sizing: border-box;
+  padding: 0;
 }
 
 .header__search-wrap .header__search-bar.active {
