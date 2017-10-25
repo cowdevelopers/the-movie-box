@@ -1,3 +1,97 @@
+// .modal
+//   display: none
+//   position: fixed
+//   z-index: 5
+//   left: 0
+//   top: 0
+//   height: 100%
+//   width: 100%
+//   background-color: rgba(0, 0, 0, 0.5)
+//   &.is-showing
+//     display: block
+
+// .modal__cont
+//   background-color: rgba(0, 0, 0, 0.85)
+//   border-radius: 5px
+//   position: absolute
+//   top: 50%
+//   left: 50%
+//   transform: translate(-50%, -50%)
+//   padding: 0
+//   width: 800px
+//   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17)
+//   animation-name: modalopen
+//   animation-duration: 0.5s
+
+// @keyframes modalopen
+//   from
+//     opacity: 0
+//   to
+//     opacity: 1
+
+// .modal__close-btn
+//   color: #555
+//   float: right
+//   font-size: 2rem
+//   padding-right: 1rem
+
+// .modal__close-btn:hover, .modal__close-btn:focus
+//   color: #dadada
+//   text-decoration: none
+//   cursor: pointer
+
+// .modal__header
+//   padding: 15px
+//   color: #fff
+
+// .modal__body
+//   padding: 1.5rem
+//   margin-left: 1rem
+
+
+// .modal__body__wrap
+//   display: grid
+//   display: -ms-grid
+//   grid-template-columns: 30% 70%
+//   -ms-grid-columns: 30% 70%
+
+//   grid-gap: 1rem
+
+// .modal__body__info__wrap
+//   padding: 1rem
+
+// .modal__title
+//   color: #fdfdfd
+//   font:
+//     size: 1.5rem
+//     weight: 400
+
+// .modal__year
+//   margin-top: 1rem
+//   color: #dfdfdf
+
+// .modal__genres
+//   font: 
+//     size: 1rem
+//     weight: 300
+//   color: #a1a1a1
+//   margin: 1rem 0
+
+// .modal__synopsis
+//   color: #b8b8b8
+//   margin-top: 3.5rem
+//   line-height: 1.4
+//   text-indent: 1rem
+
+
+
+
+
+
+
+
+
+
 .modal
   display: none
   position: fixed
@@ -50,16 +144,14 @@
 
 
 .modal__body__wrap
-  display: grid
-  display: -ms-grid
-  grid-template-columns: 30% 70%
-  -ms-grid-columns: 30% 70%
-
-  grid-gap: 1rem
 
 .modal__body__info__wrap
   padding: 1rem
+  float: right
+  width: calc( 100% - 230px - 40px)
 
+.modal__poster__wrap
+  float: left
 .modal__title
   color: #fdfdfd
   font:
@@ -79,6 +171,6 @@
 
 .modal__synopsis
   color: #b8b8b8
-  margin-top: 3.5rem
+  margin: 3.5rem 0 2rem 0
   line-height: 1.4
   text-indent: 1rem
