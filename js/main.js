@@ -133,6 +133,19 @@
         search.attr('value', '');
       }
     });
+    $(document).on('mouseover', '.body__cont__item', function() {
+      $(this).css({
+        'opacity': '0.5',
+        'transition': '0.25s'
+      })
+    })
+    
+    $(document).on('mouseleave', '.body__cont__item', function() {
+      $(this).css({
+        'opacity': '1',
+        'transition': '0.25s'
+      })
+    })
   }
 
   function getSearchData(movie) {
