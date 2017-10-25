@@ -373,7 +373,7 @@ main {
   font-size: 1.5rem;
   font-weight: bold;
   display: block;
-  width: 70%;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
