@@ -1,3 +1,138 @@
+// main
+//   background-color: #f8f8f8
+//   display: block
+//   padding-bottom: 7.5rem
+
+// .body__nav
+//   border-bottom: 1px solid #dfdfdf
+//   margin: 0 auto
+//   width: 1080px
+//   height: 72px
+//   vertical-align: middle
+  
+// .body__nav__main-wrap
+//   height: 100%
+//   float: left
+//   width: 60%
+//   .body__nav__link
+//     float: left
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     text-decoration: none
+//     color: $gray-color
+//     padding: 0 2rem
+//     font-size: 1.15rem
+//     line-height: 71px
+//     &:hover
+//       color: $main-color
+//       border-bottom: 2px solid $main-color
+//     &.active
+//       color: $main-color
+//       border-bottom: 2px solid $main-color
+
+
+// .body__nav__sub-wrap
+//   float: right
+//   height: 100%
+//   width: 20%
+//   display: flex
+//   justify-content: center
+//   align-items: center
+//   text-decoration: none
+
+
+// .body__nav__view-modules, .body__nav__view-list
+//   padding: 0 2rem
+
+
+
+
+// .list-icon, .module-icon
+//   font-size: 2rem
+//   color: $gray-color
+//   cursor: pointer
+//   &:hover
+//     color: $main-color
+
+// .body__nav__submenu
+//   display: none
+//   position: absolute
+//   left: 44%
+//   top: 46%
+//   z-index: 5
+//   padding: 1rem
+//   background-color: #dadada
+//   a
+//     text-decoration: none
+
+//   li
+//     padding: 0.5rem 1rem
+//   &.active
+//     display: block
+
+
+
+
+// .body__cont
+//   margin: 0 auto
+//   width: 1080px
+//   .body__cont__list
+//     display: grid
+//     display: -ms-grid
+//     grid-template-columns: 25% 25% 25% 25%
+//     -ms-grid-columns: 25% 25% 25% 25%
+//     padding-top: 2rem
+//     .body__cont__item
+//       background-color: #fff
+//       margin: 1rem
+//       box-shadow: 0 0 30px 1px #ccc
+//       .body__cont__item-wrapper
+//         .body__cont__poster__wrapper
+//           position: relative
+//           .body__cont__poster
+//             width: 100%
+//           .body__cont__year
+//             position: absolute
+//             bottom: 1.2rem
+//             left: 1.2rem
+//             font-size: 1.4rem
+//             color: #b6b7bf
+        
+//         .body__cont__info__wrapper
+//           position: relative
+//           padding: 1.2rem
+//           .body__cont__title
+//             font-size: 1.3rem
+//             font-weight: bold
+//             display: inline-block
+//             width: 100%
+//             white-space: nowrap
+//             overflow: hidden
+//             text-overflow: ellipsis
+//           .body__cont__genres
+//             font-size: 1rem
+//             margin-top: 0.8rem
+//             display: inline-block
+//             width: 7.2rem
+//             white-space: nowrap
+//             overflow: hidden
+//             text-overflow: ellipsis
+//             color: $gray-color
+//           .body__cont__rating
+//             position: absolute
+//             right: 0.7rem
+//             bottom: 0.7rem
+//             border: 1px solid #ff0079
+//             border-radius: 3px
+//             padding: 0.4rem 0.7rem 0.2rem 0.7rem
+//             font-size: 1rem
+//             color: $main-color
+
+
+
+
+
 main
   background-color: #f8f8f8
   display: block
@@ -8,7 +143,6 @@ main
   margin: 0 auto
   width: 1080px
   height: 72px
-  vertical-align: middle
   
 .body__nav__main-wrap
   height: 100%
@@ -16,9 +150,6 @@ main
   width: 60%
   .body__nav__link
     float: left
-    display: flex
-    justify-content: center
-    align-items: center
     text-decoration: none
     color: $gray-color
     padding: 0 2rem
@@ -36,17 +167,14 @@ main
   float: right
   height: 100%
   width: 20%
-  display: flex
-  justify-content: center
-  align-items: center
   text-decoration: none
-
-
+  
+.list-icon, .module-icon
+  float: right
+  padding: 1.5rem 0 0 3rem
+    
 .body__nav__view-modules, .body__nav__view-list
   padding: 0 2rem
-
-
-
 
 .list-icon, .module-icon
   font-size: 2rem
@@ -83,7 +211,13 @@ main
     grid-template-columns: 250px 250px 250px 250px
     -ms-grid-columns: 250px 250px 250px 250px
     padding-top: 2rem
+    &::after
+      display: block
+      content: ''
+      clear: both
     .body__cont__item
+      width: calc((100% - 8rem) / 4)
+      float: left
       background-color: #fff
       margin: 1rem
       box-shadow: 0 0 30px 1px #ccc
@@ -128,3 +262,79 @@ main
             padding: 0.4rem 0.7rem 0.2rem 0.7rem
             font-size: 1rem
             color: $main-color
+
+
+
+
+// 리스트 형식
+
+.list__form
+  margin: 0 auto
+  width: 1080px
+  .body__cont__list
+    padding-top: 0
+    margin-top: 2rem
+    .body__cont__item
+      width: 100%
+      background-color: #fff
+      margin: 0
+      margin-top: 2rem
+      box-shadow: 0 0 30px 1px #ccc
+      .body__cont__item-wrapper
+        .body__cont__poster__wrapper
+          position: 
+          .body__cont__poster
+            width: 200px
+            float: left
+          .body__cont__year
+            float: right
+            position: static
+            padding: 30px
+            font-size: 1.4rem
+            color: #b6b7bf
+        
+        .body__cont__info__wrapper
+          position: static
+          float: left
+          padding: 1.2rem
+          width: calc(100% - 500px)
+          .body__cont__title
+            float: left
+            font-size: 1.5rem
+            font-weight: bold
+            display: block
+            width: 70%
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+          .body__cont__genres
+            font-size: 1rem
+            margin-top: 0rem
+            padding-top: 1rem
+            display: block
+            width: 70%
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            color: $gray-color
+          .body__cont__rating
+            position: static
+            float: left
+            margin-top: 1rem
+            border: 1px solid #ff0079
+            border-radius: 3px
+            padding: 0.4rem 0.7rem 0.2rem 0.7rem
+            font-size: 1rem
+            color: $main-color
+
+  
+
+
+
+
+
+
+
+
+
+

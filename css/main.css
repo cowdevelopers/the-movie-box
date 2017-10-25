@@ -237,7 +237,6 @@ main {
   margin: 0 auto;
   width: 1080px;
   height: 72px;
-  vertical-align: middle;
 }
 
 .body__nav__main-wrap {
@@ -248,9 +247,6 @@ main {
 
 .body__nav__main-wrap .body__nav__link {
   float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   color: #80818a;
   padding: 0 2rem;
@@ -272,10 +268,12 @@ main {
   float: right;
   height: 100%;
   width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
+}
+
+.list-icon, .module-icon {
+  float: right;
+  padding: 1.5rem 0 0 3rem;
 }
 
 .body__nav__view-modules, .body__nav__view-list {
@@ -327,7 +325,15 @@ main {
   padding-top: 2rem;
 }
 
+.body__cont .body__cont__list::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
 .body__cont .body__cont__list .body__cont__item {
+  width: calc((100% - 8rem) / 4);
+  float: left;
   background-color: #fff;
   margin: 1rem;
   box-shadow: 0 0 30px 1px #ccc;
@@ -379,6 +385,78 @@ main {
   position: absolute;
   right: 0.7rem;
   bottom: 0.7rem;
+  border: 1px solid #ff0079;
+  border-radius: 3px;
+  padding: 0.4rem 0.7rem 0.2rem 0.7rem;
+  font-size: 1rem;
+  color: #ff0079;
+}
+
+.list__form {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+.list__form .body__cont__list {
+  padding-top: 0;
+  margin-top: 2rem;
+}
+
+.list__form .body__cont__list .body__cont__item {
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  margin-top: 2rem;
+  box-shadow: 0 0 30px 1px #ccc;
+}
+
+.list__form .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__poster__wrapper .body__cont__poster {
+  width: 200px;
+  float: left;
+}
+
+.list__form .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__poster__wrapper .body__cont__year {
+  float: right;
+  position: static;
+  padding: 30px;
+  font-size: 1.4rem;
+  color: #b6b7bf;
+}
+
+.list__form .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__info__wrapper {
+  position: static;
+  float: left;
+  padding: 1.2rem;
+  width: calc(100% - 500px);
+}
+
+.list__form .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__info__wrapper .body__cont__title {
+  float: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list__form .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__info__wrapper .body__cont__genres {
+  font-size: 1rem;
+  margin-top: 0rem;
+  padding-top: 1rem;
+  display: block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #80818a;
+}
+
+.list__form .body__cont__list .body__cont__item .body__cont__item-wrapper .body__cont__info__wrapper .body__cont__rating {
+  position: static;
+  float: left;
+  margin-top: 1rem;
   border: 1px solid #ff0079;
   border-radius: 3px;
   padding: 0.4rem 0.7rem 0.2rem 0.7rem;
