@@ -7,14 +7,20 @@
       // footer_offset
       footer_heading = null,
       modal = null,
-      modal_list = null;
+      modal_list = null,
+      target_modal = null, 
+      // header 
+      search = null,
+      target_search_list = null,
+      search_list = null,
+      search_btn = null,
+      search_input = null;
 
   
   var data = [],
-      target_modal = null, 
       page_number = 0, 
       limit = 12, 
-      scrolling_offsetTop = 0, 
+      // scrolling_offsetTop = 0, 
       get_data_flag = false,
       submenu_flag = false;
 
@@ -22,7 +28,7 @@
       genre_value = 'what',
       urls = {
         trending: 'https://yts.ag/api/v2/list_movies.json?sort_by=download_count&limit=12&page=',
-        topRated: 'https://yts.ag/api/v2/list_movies.json?sort_by=rating&limit=12&page=',
+        topRated: 'https://yts.ag/api/v2/list_movies.json?order_by=desc&sort_by=rating&limit=12&page=',
         newArrivals: 'https://yts.ag/api/v2/list_movies.json?sort_by=date_added&limit=12&page=',
         genres: 'https://yts.ag/api/v2/list_movies.json?genre=' + genre_value + '&limit=12&page='
       };
@@ -34,6 +40,10 @@
     list_nav_btns = $('.body__nav__link');
     modal = $('.modal');
     modal_list = $('.modal__body');
+    search = $('.header__search-bar');
+    search_list = $('.header__searh-list');
+    search_btn = $('.search-btn');
+    search_input = $('.header__search-bar');
     
     URL = urls.trending;
 
@@ -45,7 +55,7 @@
     $(window).on('scroll', function() {
       var scrollY = $(this).scrollTop();
 
-      if (scrollY > scrolling_offsetTop) {
+      if ($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
         get_data_flag && getData();
       }
     });
@@ -97,8 +107,39 @@
             submenu_flag = true;
           }
         }
-        
       });
+    });
+
+    search.keypress(function(e) {
+      
+      if( e.target.value !== '' && e.keyCode === 13 ) {
+        getSearchData(e.target.value);
+      } 
+      
+
+    });
+    search.keydown(function(e) {
+      if( target_search_list && e.keyCode === 8 ) {
+        target_search_list.remove();
+      }
+    });
+    search_btn.on('click', function() {
+      if( parseInt(search_input.css('width')) === 0 ) {
+        search_input.animate({ width: 300 + 'px' }, 300);
+      } else {
+        search_input.animate({ width: 0 + 'px' }, 300);
+      }
+    });
+  }
+
+  function getSearchData(movie) {
+    
+    $.get('https://yts.ag/api/v2/list_movies.json?query_term=' + movie, function(response) {
+      if( response.status === 'ok' && response.data.movie_count !== 0 ) {
+        searchListRender(response.data.movies);
+      } else {
+        alert('영화를 찾지 못했습니다.\n다시 입력해주세요.');
+      }
     });
   }
 
@@ -109,24 +150,29 @@
     // console.log('getData: ', page_number);
     $.get(URL + page_number, function(response) {
       // page_number, data 받기
-      data = data.concat(response.data.movies); 
-      console.log(data);
-      remomveRenderedItem();
+      if(response.status === 'ok') {
+        
+        data = data.concat(response.data.movies); 
+        
+        console.log(data);
+        remomveRenderedItem();
+  
+        $.each(data, function(index, data) {
+  
+          render(data, index);
+        });
 
-      $.each(data, function(index, data) {
+        setTimeout(function() {
+          get_data_flag = true;
+        }, 500);
 
-        render(data, index);
-      });
+      } else {
+        console.log('response.status: ', response.status);
+      }
       // reset scrolling_offsetTop;
 
 
-      setTimeout(function() {
-        // scrolling_offsetTop = footer_heading.offset().top / 1.5;
-        scrolling_offsetTop = $(document).height() - 1500;
-        // console.log('scrolling_offsetTop: ', scrolling_offsetTop);
-
-        get_data_flag = true;
-      }, 500);
+      
     });
   }
 
@@ -202,6 +248,7 @@
   function modalRender(data) {
 
     if( target_modal ) { target_modal.remove(); }
+    console.log('modalRender: ', data);
     // Create Element
     var modal__wrap = $('<div class="modal__wrap"></div>'),
       modal__body__wrap = $('<div class="modal__body__wrap"></div>'),
@@ -240,6 +287,31 @@
 
     target_modal = modal__wrap;
   }
+
+  function searchListRender(movies) {
+    // search_list
+    if( target_search_list ) { target_search_list.remove() }
+    console.log(movies);
+    if( movies.length === 0 ) { return; }
+
+    var ul = $('<ul></ul>');
+
+    for(var i = 0, len = movies.length; i < len; i++) {
+      var li = $('<li></li>'),
+          span = $('<span>' + movies[i].title + '</span>');
+      
+      li.append(span);
+      li.on('click', renderedSearchingMovieShowModalEvt.bind(null, movies[i]));
+      ul.append(li);
+    }
+    target_search_list = ul;
+    search_list.append(ul);    
+  }
+  function renderedSearchingMovieShowModalEvt(movie) {
+    console.log('movie: ', movie);
+    $('.modal').toggleClass('is-showing');
+    modalRender(movie);
+  } 
   init();
 
 }(window, window.jQuery));

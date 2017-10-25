@@ -30,16 +30,59 @@
 
 .header__search-wrap
   position: absolute
-  top: 1rem
+  top: 50%
+  transform: translateY(-50%)
+  height: 100%
   right: 10rem
-
-
-.search-btn.material-icons
-  color: #fff
-  font-weight: 100
+  .search-btn, .header__search-bar
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+  .search-btn
+    padding: 0
+    border: none
+    background: transparent
+    cursor: pointer
+    vertical-align: middle
+    .material-icons
+      color: #fff
+      font-weight: 100
+      vertical-align: middle
   
-.header__search-bar
-  display: none
+  .header__search-bar
+    // display: none
+    background: rgba(255, 255, 255, .8)
+    border: none
+    vertical-align: middle
+    width: 0
+    height: 1.5rem
+    box-sizing: border-box
+    // padding: 5px 0 5px 10px
+    &.active
+      width: 300px
+
+  .header__searh-list
+    position: absolute
+    top: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.8)
+    max-height: 300px
+    overflow: auto
+    ul
+      box-sizing: border-box
+      
+      padding: 15px 7px
+    li
+      margin-bottom: 7px
+      &.last-child 
+        margin-bottom: 0
+    span
+      font-size: 0.8rem
+      cursor: pointer
+      color: #fff
+      &:hover,
+      &:focus
+        color: $gray-color
 
 
 .header__main-content__wrap

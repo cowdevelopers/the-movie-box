@@ -74,17 +74,75 @@ table {
 
 .header__search-wrap {
   position: absolute;
-  top: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
   right: 10rem;
 }
 
-.search-btn.material-icons {
-  color: #fff;
-  font-weight: 100;
+.header__search-wrap .search-btn, .header__search-wrap .header__search-bar {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.header__search-bar {
-  display: none;
+.header__search-wrap .search-btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.header__search-wrap .search-btn .material-icons {
+  color: #fff;
+  font-weight: 100;
+  vertical-align: middle;
+}
+
+.header__search-wrap .header__search-bar {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  vertical-align: middle;
+  width: 0;
+  height: 1.5rem;
+  box-sizing: border-box;
+}
+
+.header__search-wrap .header__search-bar.active {
+  width: 300px;
+}
+
+.header__search-wrap .header__searh-list {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  max-height: 300px;
+  overflow: auto;
+}
+
+.header__search-wrap .header__searh-list ul {
+  box-sizing: border-box;
+  padding: 15px 7px;
+}
+
+.header__search-wrap .header__searh-list li {
+  margin-bottom: 7px;
+}
+
+.header__search-wrap .header__searh-list li.last-child {
+  margin-bottom: 0;
+}
+
+.header__search-wrap .header__searh-list span {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header__search-wrap .header__searh-list span:hover, .header__search-wrap .header__searh-list span:focus {
+  color: #80818a;
 }
 
 .header__main-content__wrap {
@@ -264,8 +322,8 @@ main {
 .body__cont .body__cont__list {
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  -ms-grid-columns: 25% 25% 25% 25%;
+  grid-template-columns: 250px 250px 250px 250px;
+  -ms-grid-columns: 250px 250px 250px 250px;
   padding-top: 2rem;
 }
 
@@ -364,7 +422,7 @@ main {
 .modal {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   left: 0;
   top: 0;
   height: 100%;
